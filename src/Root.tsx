@@ -1,9 +1,9 @@
-import { Composition, staticFile } from "remotion";
-import { AudioGramSchema, AudiogramComposition, fps } from "./Composition";
-import "./style.css";
+import { Composition, staticFile } from 'remotion';
+import { AudioGramSchema, AudiogramComposition, fps } from './Composition';
+import './style.css';
 
 export const RemotionRoot: React.FC = () => {
-  return (
+	return (
     <>
       <Composition
         id="Audiogram"
@@ -13,31 +13,23 @@ export const RemotionRoot: React.FC = () => {
         height={1080}
         schema={AudioGramSchema}
         defaultProps={{
-          // Audio settings
-          audioOffsetInSeconds: 6.9,
-
-          // Title settings
+          audioOffsetInSeconds: 0,
           audioFileName: staticFile("audio.mp3"),
           coverImgFileName: staticFile("cover.jpg"),
-          titleText:
-            "#234 – Money, Kids, and Choosing Your Market with Justin Jackson of Transistor.fm",
+          titleText: "Season #6: Episode 3",
           titleColor: "rgba(186, 186, 186, 0.93)",
-
-          // Subtitles settings
           subtitlesFileName: staticFile("subtitles.srt"),
           onlyDisplayCurrentSentence: true,
           subtitlesTextColor: "rgba(255, 255, 255, 0.93)",
-          subtitlesLinePerPage: 4,
-          subtitlesZoomMeasurerSize: 10,
-          subtitlesLineHeight: 98,
-
-          // Wave settings
+          subtitlesLinePerPage: 2,
+          subtitlesZoomMeasurerSize: 100,
+          subtitlesLineHeight: 80,
           waveColor: "#a3a5ae",
-          waveFreqRangeStartIndex: 7,
-          waveLinesToDisplay: 29,
-          waveNumberOfSamples: "256", // This is string for Remotion controls and will be converted to a number
+          waveFreqRangeStartIndex: 8,
+          waveLinesToDisplay: 50,
+          waveNumberOfSamples: "512" as const,
           mirrorWave: true,
-          durationInSeconds: 29.5,
+          durationInSeconds: 31,
         }}
         // Determine the length of the video based on the duration of the audio file
         calculateMetadata={({ props }) => {
