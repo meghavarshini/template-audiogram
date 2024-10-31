@@ -25,8 +25,10 @@ npm run build
 Or check out the [Remotion docs](/docs/render/). There are lots of ways to render.
 
 ## Where to get a transcript (SRT file)?
+You can use Whisper AI:
+- open the notebook [Subtitles_With_Whisper.ipynb](https://github.com/meghavarshini/template-audiogram/blob/main/Subtitles_With_Whisper.ipynb) provided above. Click on 'Open with Colab', and simply run it with the desired `mp3` file to generate an `srt` file.
 
-There are a few places:
+There are a few other places places:
 
 - Your podcasting host might provide them for you.
 - Descript makes transcription really easy.
